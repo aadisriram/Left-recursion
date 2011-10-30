@@ -93,7 +93,7 @@ public class LeftRecR
 				
 				for(String y:tmp)
 				{
-					tmpr.add(y+tmpl);
+					tmpr.add(y+ltp);
 				}
 				
 				ArrayList<String> lop=new ArrayList<String>(); 
