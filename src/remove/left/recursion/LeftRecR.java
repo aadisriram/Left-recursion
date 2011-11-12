@@ -55,6 +55,10 @@ public class LeftRecR
 				System.out.print(k+"/");
 			}
 		}
+		
+		System.out.println(" Evalutating the first set: ");
+		
+		
 	}
 	
 	private static void eliminator()
