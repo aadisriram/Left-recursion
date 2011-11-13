@@ -7,31 +7,17 @@ public class LeftRecR
 {
 	static int count=0;
 	static public ArrayList<Productions> prodL=new ArrayList<Productions>();
-	
+	static public ArrayList<String> inputStr=new ArrayList<String>();
 	
 	public static ArrayList<Productions> Read_Clean()  	// The commented part is what i intend to use -Vasu
 	{	
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		System.out.println("\nEnter the production with one line per symbol on the LHS: ");
+		inputStr=leftF.leftFactorer();
 		
-		System.out.println("How many productions:");
-		count=Integer.parseInt(getStrings(br));
-		
-		while(count>0)
+		for (String input:inputStr)
 		{
-			try 
-			{
-				String input = getStrings(br);
-				String[] lp = input.split("->");
-				prodL.add(new Productions(lp[0],lp[1]));
-			} 
-			catch (Exception e) 
-			{
-				e.printStackTrace();
-			}
-			
-			count--;
+			String[] lp = input.split("->");
+			prodL.add(new Productions(lp[0],lp[1]));
 		}
 		
 		System.out.println("Eliminating left recursion: ");
